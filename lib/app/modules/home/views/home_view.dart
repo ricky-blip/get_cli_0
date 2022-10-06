@@ -16,7 +16,7 @@ class HomeView extends GetView<HomeController> {
       body: Center(
         child: ElevatedButton(
           onPressed: () => "",
-          child: Text("Go To Product PAGES >>"),
+          child: Text("Go To ProductPages >>"),
         ),
       ),
     );
