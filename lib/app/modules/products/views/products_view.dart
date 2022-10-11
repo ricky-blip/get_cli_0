@@ -10,13 +10,19 @@ class ProductsView extends GetView<ProductsController> {
         title: const Text('ProductsView'),
         centerTitle: true,
       ),
-      body: ListView.builder(
-        itemCount: controller.allProducts.length,
-        itemBuilder: (context, index) => ListTile(
-          title: Text(
-            controller.allProducts[index]["name"],
+      body: Obx(
+        () => ListView.builder(
+          itemCount: controller.allProducts.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(
+              controller.allProducts[index]["name"],
+            ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => "",
+        child: Icon(Icons.add),
       ),
     );
   }
