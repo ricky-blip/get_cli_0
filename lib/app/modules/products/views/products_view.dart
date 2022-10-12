@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_getcli/app/routes/app_pages.dart';
 import '../controllers/products_controller.dart';
 
 class ProductsView extends GetView<ProductsController> {
@@ -21,7 +22,7 @@ class ProductsView extends GetView<ProductsController> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => "",
+        onPressed: () => Get.toNamed(Routes.ADD_PRODUCT),
         child: Icon(Icons.add),
       ),
     );
