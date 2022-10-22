@@ -4,7 +4,7 @@ class ProductsController extends GetxController {
   RxList<Map<String, dynamic>> allProducts = <Map<String, dynamic>>[
     {
       "id": DateTime.now().toIso8601String(),
-      "name": "Sandals.",
+      "name": "Sandals",
       "price": 100,
     },
     {
