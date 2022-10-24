@@ -15,9 +15,7 @@ class ProductsView extends GetView<ProductsController> {
         () => ListView.builder(
           itemCount: controller.allProducts.length,
           itemBuilder: (context, index) => ListTile(
-            title: Text(
-              controller.allProducts[index]["name"],
-            ),
+            title: Text(controller.allProducts[index]["name"]),
           ),
         ),
       ),
