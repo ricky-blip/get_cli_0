@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_getcli/app/routes/app_pages.dart';
 import '../controllers/products_controller.dart';
+import 'product_item_view.dart';
 
 class ProductsView extends GetView<ProductsController> {
   @override
@@ -14,8 +15,8 @@ class ProductsView extends GetView<ProductsController> {
       body: Obx(
         () => ListView.builder(
           itemCount: controller.allProducts.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(controller.allProducts[index]["name"]),
+          itemBuilder: (context, index) => ProductItems(
+            data: controller.allProducts[index],
           ),
         ),
       ),
